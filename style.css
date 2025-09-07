@@ -4,6 +4,15 @@
     font-family: "Inter", sans-serif;
 }
 
+select {
+    background-image: url('./assets/down-arrow.png');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 24px;
+    padding-right: 30px;
+}
+
+
 .banner-area:before,
 .banner-area:after {
     position: absolute;
