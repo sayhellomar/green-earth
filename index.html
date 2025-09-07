@@ -64,6 +64,7 @@
 
 
         <!-- ====================== Choose Your Trees ==================== -->
+         
          <section class="choose-trees-area bg-[#f0fdf4] py-14 lg:py-[100px]">
             <div class="w-11/12 lg:w-full max-w-[1650px] mx-auto">
                 <h3 class="text-3xl font-semibold text-center mb-10 text-[#1f2937]">Choose Your Trees</h3>
@@ -74,40 +75,14 @@
                             <div class="category-label"><li onclick="getAllTrees('https://openapi.programming-hero.com/api/plants')" class="category-li text-base cursor-pointer p-2 active">All Trees</li></div>
                         </ul>
                     </aside>
-                    <section id="tree-showcase-wrapper" class="tree-showcase col-span-full lg:col-span-8 grid grid-cols-1 lg:grid-cols-3 gap-[30px] order-3 lg:order-2">
-                        <!-- <div class="tree-showcase-item bg-white p-4 rounded-lg">
-                            <img class="w-full h-[185px] rounded-lg object-cover" src="./assets/about.png" alt="Mango Tree">
-                            <h5 class="text-sm font-semibold text-[#1f2937] mt-3 mb-2 cursor-pointer">Mango Tree</h5>
-                            <p class="text-xs text-[#1f2937] opacity-80">A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense green</p>
-                            <div class="tree-item-category flex justify-between mt-2 mb-3">
-                                <p class="text-sm bg-[#dcfce7] py-1 px-2 rounded-full text-[#15803D] font-medium">Fruit Tree</p>
-                                <p class="text-sm font-semibold">৳<span class="tree-price">500</span></p>
-                            </div>
-                            <a href="#" class="add-to-cart-btn p-3 w-full block text-center bg-[#15803d] text-white text-base rounded-full font-medium">Add to Cart</a>
-                        </div> -->
-                    </section>
+
+                    <div id="loading-bar" class="col-span-full lg:col-span-8 order-3 lg:order-2 text-center hidden"><span class="loading loading-bars loading-xl"></span></div>
+
+                    <section id="tree-showcase-wrapper" class="tree-showcase col-span-full lg:col-span-8 grid grid-cols-1 lg:grid-cols-3 gap-[30px] order-3 lg:order-2"></section>
+
                     <aside class="green-earth-cart col-span-full lg:col-span-2 bg-white rounded-2xl p-4 order-1 lg:order-3">
-                        <h3 class="text-xl font-semibold">Your Cart</h3>
-                        <div id="cart-item-wrapper" class="cart-item-wrapper">
-                            <!-- <div class="cart-item flex justify-between items-center bg-[#f0fdf4] py-2 px-3 mt-2">
-                                <div class="cart-item-details">
-                                    <h5 class="text-sm font-semibold text-[#1f2937]">Mango Tree</h5>
-                                    <p class="text-[#1f2937] opacity-50 text-base">৳<span class="cart-item-details-price">500</span> x <span class="cart-item-details-quantity">1</span></p>
-                                </div>
-                                <div id="cross-icon" class="cursor-pointer">
-                                    <img src="./assets/close.png" alt="Close">
-                                </div>
-                            </div>
-                            <div class="cart-item flex justify-between items-center bg-[#f0fdf4] py-2 px-3 mt-2">
-                                <div class="cart-item-details">
-                                    <h5 class="text-sm font-semibold text-[#1f2937]">Mango Tree</h5>
-                                    <p class="text-[#1f2937] opacity-50 text-base">৳<span class="cart-item-details-price">500</span> x <span class="cart-item-details-quantity">1</span></p>
-                                </div>
-                                <div id="cross-icon" class="cursor-pointer">
-                                    <img src="./assets/close.png" alt="Close">
-                                </div>
-                            </div> -->
-                        </div>
+                        <h3 class="text-xl font-semibold text-center lg:text-left">Your Cart</h3>
+                        <div id="cart-item-wrapper" class="cart-item-wrapper"></div>
                         <div id="cart-total-wrapper" class="cart-total flex justify-between border-t border-[#1f29371a] text-base font-medium text-[#1f2937] mt-2 pt-2 hidden"></div>
                     </aside>
                 </div>
@@ -118,15 +93,6 @@
             <dialog id="tree_details_modal" class="modal modal-bottom sm:modal-middle">
                 <div class="modal-box">
                     <div id="modal-container"></div>
-                    <!-- <div class="tree-showcase-item">
-                        <img class="rounded-lg object-cover" src="./assets/about.png" alt="Mango Tree">
-                        <h5 class="text-sm font-semibold text-[#1f2937] mt-3 mb-2 cursor-pointer">Mango Tree</h5>
-                        <p class="text-xs text-[#1f2937] opacity-80">A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense green</p>
-                        <div class="tree-item-category flex justify-between mt-2 mb-3">
-                            <p class="text-sm bg-[#dcfce7] py-1 px-2 rounded-full text-[#15803D] font-medium">Fruit Tree</p>
-                            <p class="text-sm font-semibold">৳<span class="tree-price">500</span></p>
-                        </div>
-                    </div> -->
                     <div class="modal-action">
                         <form method="dialog">
                             <button class="btn">Close</button>
